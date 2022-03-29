@@ -37,13 +37,7 @@ service:
 dataDir: /srv/trilium-data
 
 persistentVolume:
-  name:trilium
-  enabled: TRUE
-  storageClassName: longhorn
-  accessModes:
-    - ReadWriteOnce
-  annotations: {}
-  size: 1Gi
+  enabled: false
 
 ingress:
   enabled: false
