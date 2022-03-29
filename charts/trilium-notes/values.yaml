@@ -34,7 +34,7 @@ service:
   type: NodePort
   port: 30001
 
-dataDir: /srv/trilium-data
+dataDir: /data
 
 persistentVolume:
   enabled: false
