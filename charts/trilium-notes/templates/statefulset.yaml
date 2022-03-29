@@ -46,7 +46,7 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: trilium-data
+            - name: trilium
               mountPath: "{{ .Values.dataDir }}"
       {{- with .Values.nodeSelector }}
       nodeSelector:
