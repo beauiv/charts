@@ -31,17 +31,19 @@ securityContext:
   allowPrivilegeEscalation: false
 
 service:
-  type: ClusterIP
-  port: 8080
+  type: NodePort
+  port: 30001
 
 dataDir: /srv/trilium-data
 
 persistentVolume:
-  enabled: false
+  name:trilium
+  enabled: TRUE
+  storageClassName: longhorn
   accessModes:
     - ReadWriteOnce
   annotations: {}
-  size: 2Gi
+  size: 1Gi
 
 ingress:
   enabled: false
